@@ -1,0 +1,115 @@
+:root {
+  --strongCyan: hsl(172, 67%, 45%);
+  --veryDarkCyan: hsl(183, 100%, 15%);
+  --darkGrayishCyan: hsl(186, 14%, 43%);
+  --grayishCyan: hsl(184, 14%, 56%);
+  --lightGrayishCyan: hsl(185, 41%, 84%);
+  --veryLightGrayishCyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Space Mono", monospace;
+}
+
+body {
+  background-color: var(--lightGrayishCyan);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.splitter-container {
+  background-color: var(--white);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: stretch;
+  align-items: center;
+  width: 917px;
+  height: 478px;
+  border-radius: 30px;
+}
+
+.section1 {
+  display: flex;
+  flex-direction: column;
+  margin: 51px 47px;
+  height: -webkit-fill-available;
+  /* justify-content: space-evenly; */
+}
+
+.section1 p {
+  color: var(--veryDarkCyan);
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  gap: 12px;
+}
+
+.options input {
+  width: 115px;
+  height: -webkit-fill-available;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  opacity: 0;
+}
+
+.section1 button {
+  background-color: var(--veryDarkCyan);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  padding: 7px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+input {
+  height: 47px;
+  border-radius: 5px;
+  background-color: var(--veryLightGrayishCyan);
+  border: none;
+  padding: 0px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  text-align: end;
+  color: var(--veryDarkCyan);
+}
+
+input::placeholder {
+  color: var(--grayishCyan);
+  text-align: end;
+}
+
+.section1 > input:nth-child(2) {
+  background: url(/images/icon-dollar.svg) no-repeat;
+  background-color: var(--veryLightGrayishCyan);
+  background-position: 15px center;
+  margin-bottom: 24px;
+}
+
+.section1 > input:last-child {
+  background: url(/images/icon-person.svg) no-repeat;
+  background-color: var(--veryLightGrayishCyan);
+  background-position: 15px center;
+}
