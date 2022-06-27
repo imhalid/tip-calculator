@@ -28,10 +28,12 @@ body {
 }
 
 .title {
+  text-align: center;
   letter-spacing: 15px;
   width: 140px;
   word-wrap: break-word;
   margin-bottom: 70px;
+  padding-left: 20px;
   color: var(--veryDarkCyan);
 }
 
@@ -159,7 +161,7 @@ input::placeholder {
   background-position: 15px center;
 }
 
-.section1 > input:last-child {
+.section1 .numberOfPeople > input {
   background: url(/images/icon-person.svg) no-repeat;
   background-color: var(--veryLightGrayishCyan);
   background-position: 15px center;
@@ -219,4 +221,53 @@ input::placeholder {
   opacity: 0.2;
   border-radius: 5px;
   margin-top: 125px;
+}
+
+@media (max-width: 960px) {
+  body {
+    height: 100%;
+  }
+  .title {
+    margin-bottom: 40px;
+    padding-left: 20px;
+  }
+  .splitter-container {
+    width: auto;
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "section1";
+  }
+
+  .section1 {
+    margin: 33px;
+  }
+
+  .section1 p:nth-child(3) {
+    margin-top: 30px;
+  }
+
+  .options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .options input {
+    width: 144px;
+  }
+
+  .numberOfPeople {
+    margin-top: 30px;
+  }
+  .section2 {
+    padding: 40px 21px;
+    margin: 0 24px 32px 24px;
+  }
+
+  .section2 h1 {
+    font-size: 2.2rem;
+  }
+
+  .section2 .reset {
+    margin-top: 36px;
+  }
 }
