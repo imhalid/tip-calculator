@@ -14,20 +14,20 @@
     <div class="splitter-container">
       <div class="section1">
         <p>Bill</p>
-        <input type="text" id="bill" placeholder="0" />
+        <input type="number" id="bill" placeholder="0" min="1" max="2000" />
         <p>Select Tip %</p>
         <div class="options">
-            <button tabindex="1" value="5">5%</button>
-            <button tabindex="1" value="10">10%</button>
-            <button tabindex="1" value="15">15%</button>
-            <button tabindex="1" value="25">25%</button>
-            <button tabindex="1" value="50">50%</button>
+            <button class="button" data-value="5">5%</button>
+            <button class="button" data-value="10">10%</button>
+            <button class="button" data-value="15">15%</button>
+            <button class="button" data-value="25">25%</button>
+            <button class="button" data-value="50">50%</button>
             <input type="number" placeholder="Custom" />
           
         </div>
         <p>Number of People</p>
         <!-- <p>Can't be zero</p> -->
-        <input type="text" id="people" placeholder="0" />
+        <input type="number" id="people" placeholder="0" value="" min="1" max="100" />
       </div>
       <div class="section2">
         <div class="tipAmount">
