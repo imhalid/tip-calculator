@@ -14,7 +14,7 @@
     <div class="splitter-container">
       <div class="section1">
         <p>Bill</p>
-        <input type="number" id="bill" placeholder="0" min="1" max="2000" />
+        <input type="number" id="bill" placeholder="0" min="1"  />
         <p>Select Tip %</p>
         <div class="options">
             <button class="button" data-value="5">5%</button>
@@ -25,9 +25,12 @@
             <input type="number" placeholder="Custom" />
           
         </div>
-        <p>Number of People</p>
-        <!-- <p>Can't be zero</p> -->
-        <input type="number" id="people" placeholder="0" value="" min="1" max="100" />
+        <div class="title">
+          <p>Number of People</p>
+          <p class="alert">cant</p>
+        </div>
+        
+        <input type="number" id="people" placeholder="0" value="" min="1" />
       </div>
       <div class="section2">
         <div class="tipAmount">

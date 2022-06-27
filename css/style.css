@@ -1,4 +1,5 @@
 :root {
+  --alertRed: hsl(6, 68%, 51%);
   --strongCyan: hsl(172, 67%, 45%);
   --veryDarkCyan: hsl(183, 100%, 15%);
   --darkGrayishCyan: hsl(186, 14%, 43%);
@@ -110,8 +111,17 @@ input {
   transition: all 0.2s ease-in-out;
 }
 
-input[type="number"]:out-of-range {
+.section1 input[type="number"]:out-of-range {
   border: red 2px solid;
+}
+
+.alert {
+  opacity: 0;
+}
+
+input[type="number"]:out-of-range > .alert {
+  color: var(--alertRed);
+  opacity: 1;
 }
 
 input:focus {
@@ -122,6 +132,11 @@ input:focus {
   border: var(--strongCyan) 1px solid;
 } */
 
+.title {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 45px;
+}
 input::placeholder {
   color: var(--grayishCyan);
   text-align: end;
@@ -140,9 +155,5 @@ input::placeholder {
 }
 
 .section1 p:nth-child(3) {
-  margin-top: 45px;
-}
-
-.section1 p:nth-child(5) {
   margin-top: 45px;
 }
