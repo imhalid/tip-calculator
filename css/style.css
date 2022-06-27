@@ -27,6 +27,14 @@ body {
   height: 100vh;
 }
 
+.title {
+  letter-spacing: 15px;
+  width: 140px;
+  word-wrap: break-word;
+  margin-bottom: 70px;
+  color: var(--veryDarkCyan);
+}
+
 .splitter-container {
   background-color: var(--white);
   display: grid;
@@ -48,7 +56,7 @@ body {
 
 .section1 p {
   color: var(--darkGrayishCyan);
-  font-weight: 700;
+  font-weight: 400;
   margin-bottom: 4px;
 }
 
@@ -115,11 +123,23 @@ input {
   border: red 2px solid;
 }
 
-.alert {
-  opacity: 0;
+.numberOfPeople {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: 45px;
 }
 
-input[type="number"]:out-of-range > .alert {
+.texts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.alert {
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+input[type="number"]:out-of-range + .texts > .alert {
   color: var(--alertRed);
   opacity: 1;
 }
@@ -128,15 +148,6 @@ input:focus {
   border: green 2px solid;
 }
 
-/* input:placeholder-shown {
-  border: var(--strongCyan) 1px solid;
-} */
-
-.title {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 45px;
-}
 input::placeholder {
   color: var(--grayishCyan);
   text-align: end;
@@ -156,4 +167,56 @@ input::placeholder {
 
 .section1 p:nth-child(3) {
   margin-top: 45px;
+}
+
+.section2 {
+  display: flex;
+  flex-direction: column;
+  margin: 32px 32px 32px 0px;
+  height: -webkit-fill-available;
+  justify-content: space-evenly;
+  background-color: var(--veryDarkCyan);
+  border-radius: 30px;
+  color: var(--white);
+  padding: 58px 41px 39px 41px;
+}
+
+.tipAmount {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.totalAmount {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section2 h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  color: var(--strongCyan);
+}
+
+.section2 span {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--grayishCyan);
+}
+
+.reset {
+  height: 50px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--veryDarkCyan);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: var(--strongCyan);
+  opacity: 0.2;
+  border-radius: 5px;
+  margin-top: 125px;
 }

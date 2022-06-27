@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    Splitter
+    <h2 class="title">SPLITTER</h2>
     <div class="splitter-container">
       <div class="section1">
         <p>Bill</p>
@@ -22,25 +22,28 @@
             <button class="button" data-value="15">15%</button>
             <button class="button" data-value="25">25%</button>
             <button class="button" data-value="50">50%</button>
-            <input type="number" placeholder="Custom" />
-          
+            <input id="custom" type="number" placeholder="Custom" />
         </div>
-        <div class="title">
-          <p>Number of People</p>
-          <p class="alert">cant</p>
+        <div class="numberOfPeople">
+          <input type="number" id="people" placeholder="0" value="" min="1" />
+          <div class="texts">
+            <p>Number of People</p>
+            <p class="alert">Can't be zero</p>
+          </div>
         </div>
-        
-        <input type="number" id="people" placeholder="0" value="" min="1" />
       </div>
+
+
       <div class="section2">
         <div class="tipAmount">
           <p>Tip Amount <span>/ person</span></p>
-          <h1>$0.00</h1>
+          <h1 id="tipAmount">$0.00</h1>
         </div>
         <div class="totalAmount">
-          <p>Total Amount</p>
-          <h1>$0.00</h1>
+          <p>Total Amount <span>/ person</span></p>
+          <h1 id="totalAmount">$0.00</h1>
       </div>
+<button class="reset">RESET</button>
     </div>
     <script src="js/script.js"></script>
   </body>
