@@ -46,9 +46,9 @@ body {
 }
 
 .section1 p {
-  color: var(--veryDarkCyan);
+  color: var(--darkGrayishCyan);
   font-weight: 700;
-  margin-bottom: 7px;
+  margin-bottom: 4px;
 }
 
 .options {
@@ -65,22 +65,31 @@ body {
   height: -webkit-fill-available;
 }
 
+.options input::placeholder {
+  color: var(--darkGrayishCyan);
+}
+
 input::-webkit-inner-spin-button,
 input::-webkit-outer-spin-button {
   -webkit-appearance: none;
   opacity: 0;
 }
 
-.section1 button {
+.options button {
   background-color: var(--veryDarkCyan);
   color: var(--white);
   border: none;
+  height: 48px;
   border-radius: 5px;
   padding: 7px;
   font-size: 1.2rem;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+}
+
+.options button:focus {
+  background-color: var(--strongCyan);
 }
 
 input {
@@ -105,11 +114,18 @@ input::placeholder {
   background: url(/images/icon-dollar.svg) no-repeat;
   background-color: var(--veryLightGrayishCyan);
   background-position: 15px center;
-  margin-bottom: 24px;
 }
 
 .section1 > input:last-child {
   background: url(/images/icon-person.svg) no-repeat;
   background-color: var(--veryLightGrayishCyan);
   background-position: 15px center;
+}
+
+.section1 p:nth-child(3) {
+  margin-top: 45px;
+}
+
+.section1 p:nth-child(5) {
+  margin-top: 45px;
 }
