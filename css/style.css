@@ -216,11 +216,23 @@ input::placeholder {
   color: var(--veryDarkCyan);
   border: none;
   outline: none;
-  cursor: pointer;
+
   background-color: var(--strongCyan);
   opacity: 0.2;
   border-radius: 5px;
   margin-top: 125px;
+  transition: all 0.2s ease-in-out;
+}
+
+.openReset {
+  cursor: pointer;
+  opacity: 1;
+  filter: brightness(1);
+  transition: all 0.2s ease-in-out;
+}
+
+.openReset:hover {
+  filter: brightness(1.2);
 }
 
 @media (max-width: 960px) {
