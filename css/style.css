@@ -52,7 +52,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: 51px 47px;
-  height: -webkit-fill-available;
+  /* height: 376px; */
   /* justify-content: space-evenly; */
 }
 
@@ -73,7 +73,7 @@ body {
 
 .options input {
   width: 115px;
-  height: -webkit-fill-available;
+  /* height: -webkit-fill-available; */
   border: none;
   outline: none;
 }
@@ -175,7 +175,7 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   margin: 32px 32px 32px 0px;
-  height: -webkit-fill-available;
+  /* height: -webkit-fill-available; */
   justify-content: space-evenly;
   background-color: var(--veryDarkCyan);
   border-radius: 30px;
